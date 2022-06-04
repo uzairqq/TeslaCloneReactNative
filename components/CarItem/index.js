@@ -3,15 +3,24 @@ import StyledButton from "../StyledButton";
 import styles from "./styles";
 
 const CarItem = (props) => {
+
+
+  const {title,subTitle,subTitleCTA,image}=props;
+
   return (
     <View style={styles.carContainer}>
       <ImageBackground
-        source={require("../../assets/images/ModelS.jpeg")}
+        source={image}
         style={styles.image}
       />
       <View style={styles.titles}>
-        <Text style={styles.title}>Model S</Text>
-        <Text style={styles.subTitle}>Starting at Price $69,450</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subTitle}>
+          {subTitle}{' '}
+          <Text style={styles.subTitleCTA}>
+            {subTitleCTA}
+          </Text>
+          </Text>
       </View>
 
 
