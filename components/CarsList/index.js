@@ -1,4 +1,4 @@
-import {  View,FlatList } from 'react-native'
+import {  View,FlatList,Dimensions } from 'react-native'
 import cars from './cars'
 import CarItem from '../CarItem'
 import styles from './styles'
@@ -9,6 +9,9 @@ const CarsList = () => {
       <FlatList 
          data={cars} 
          renderItem={({item})=> <CarItem car={item}  />}
+         snapToAlignment={'start'}
+         decelerationRate={'normal'}
+         snapToInterval={Dimensions.get('screen').height}
          />
     </View>
   )
