@@ -4,14 +4,10 @@ import styles from "../StyledButton/styles";
 
 const StyledButton = (props) => {
 
-  // const type=props.type;
-  // const title=props.title;
-  // const onPress=props.onPress;
-
   const {type,title,onPress}=props;
 
-
   const backgroundColor=type==='primary'?'grey':'white';
+  
   const textColor=type==='primary'?'white':'black';
 
   return (
